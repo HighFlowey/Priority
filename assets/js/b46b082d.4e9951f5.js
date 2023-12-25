@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[464],{59389:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"Memory","desc":"[Priority] classes get stored here so [Constructor.new] doesn\'t create multiple classes for one [Humanoid].","private":true,"source":{"line":17,"path":"src/init.lua"}}')}}]);
