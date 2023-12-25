@@ -4,5 +4,6 @@ version = "0.5.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
+description = "Priority based state machines with features to help you change humanoid properties with ease."
 
 [dependencies]
