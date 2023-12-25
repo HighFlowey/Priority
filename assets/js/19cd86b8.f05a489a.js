@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[207],{63891:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/HighFlowey/Priority/blob/master","baseUrl":"/Priority/","classOrder":[],"apiCategories":[]}')}}]);
