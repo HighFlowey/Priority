@@ -1,4 +1,6 @@
 --!nocheck
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Signal = require(ReplicatedStorage.Signal)
 --[=[
 	@class Priority
 
@@ -29,6 +31,22 @@ export type StateMapInfo = {
 	@return void
 ]=]
 function class:__init__()
+	--[=[
+		@prop ActiveStateChanged Signal
+		@within Priority
+
+		```lua
+		-- Example
+		Priority.ActiveStateChanged:Connect(function(stateName)
+
+		end)
+		```
+
+		A signal that get's fired when [Priority.ActiveState] changes.
+		Fires: stateName string
+	]=]
+	self.ActiveStateChanged = Signal.new()
+
 	--[=[
 		@prop PropertyModifier {(n: string, p: number)->(number)}
 		@within Priority

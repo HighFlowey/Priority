@@ -4,6 +4,7 @@
     "$className": "Folder",
     "Priority5": {
       "$path": "src"
-    }
+    },
+    "$path": "Packages"
   }
 }

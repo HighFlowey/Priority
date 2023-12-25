@@ -5,6 +5,8 @@ local Statemachine = require(script.Statemachine)
 
 --[=[
 	@class Constructor
+
+	Returned by the main module.
 ]=]
 local module = {}
 
@@ -25,6 +27,19 @@ export type Priority = typeof(setmetatable({}, Statemachine))
 	@param properties {[string]: any} -- properties of a [Humanoid], only properties that are numbers are acceptable, the property will get multiplied by the number you put as the value.
 	@return ()->() -- a destructor function that disables the weight
 	@return string -- id of the weight
+
+	```lua
+	-- Example
+	local Priority = Priority5.new(humanoid)
+	local disableWeight = Priority5.createWeight(Priority, {
+		["WalkSpeed"] = 0.5, -- multiplies WalkSpeed by 0.5 (2x slower)
+		["JumpPower"] = 2, -- doubles JumpPower
+	})
+
+	task.wait(2)
+
+	disableWeight()
+	```
 
 	Creates a weight that can be applied to a [Priority] class
 ]=]
@@ -61,6 +76,13 @@ end
 	@within  Constructor
 	@param humanoid Instance|Humanoid -- preferably a [Humanoid]
 	@return Priority
+
+	```lua
+	-- Example
+	local character = ...
+	local humanoid = character:WaitForChild("Humanoid")
+	local Priority = Priority5.new(humanoid)
+	```
 
 	Creates a [Priority] class
 ]=]
