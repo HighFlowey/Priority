@@ -146,5 +146,20 @@ return function()
 			class:setEnabled("Run", false)
 			expect(class.ActiveState).to.never.equal(Starter["Run"])
 		end)
+
+		it("When active state changes, signal should be fired", function()
+			local received = false
+			local signal = class.ActiveStateChanged:Connect(function(name)
+				if name == "Run" then
+					received = true
+				end
+			end)
+
+			class:setEnabled("Run", true)
+			expect(received).to.be.equal(true)
+			class:setEnabled("Run", false)
+
+			signal:Disconnect()
+		end)
 	end)
 end
