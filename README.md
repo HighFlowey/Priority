@@ -2,7 +2,9 @@
 Priority based state machine, mostly used for fighting games where you have alot of features that change a humanoid's walkspeed and jumppower.
 
 # Installing with wally
-`Priority = "highflowey/priority@0.5.0"``
+```
+Priority = "highflowey/priority@0.5.0"
+```
 
 # Installing with git
 Clone the github repo and rename the src folder to Priority then use rojo to convert it to a Roblox model.
