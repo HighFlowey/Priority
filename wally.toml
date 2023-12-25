@@ -3,6 +3,7 @@ name = "highflowey/priority"
 version = "0.5.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
 
 [dependencies]
 Bridgenet2 = "ffrostflame/bridgenet2@1.0.0"

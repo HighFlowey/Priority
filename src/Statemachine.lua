@@ -22,6 +22,11 @@ function class:__init__()
 	self.States = {} -- dictionary of states
 end
 
+function class:setEnabled(stateName: string, stateEnabled: boolean)
+	self.States[stateName].Enabled = stateEnabled
+	self:update()
+end
+
 function class:apply()
 	local humanoid: Humanoid = self.Humanoid
 	local state: StateInfo = self.ActiveState

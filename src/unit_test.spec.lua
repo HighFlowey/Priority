@@ -139,5 +139,12 @@ return function()
 				expect(humanoid[i]).to.be.equal(v)
 			end
 		end)
+
+		it("Active state should be changed to new enabled state that has high priority", function()
+			class:setEnabled("Run", true)
+			expect(class.ActiveState).to.be.equal(Starter["Run"])
+			class:setEnabled("Run", false)
+			expect(class.ActiveState).to.never.equal(Starter["Run"])
+		end)
 	end)
 end
