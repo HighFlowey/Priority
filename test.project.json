@@ -1,0 +1,27 @@
+{
+  "name": "Priority",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Priority5": {
+        "$path": "src"
+      },
+      "TestEZ": {
+        "$path": "test/TestEZ"
+      },
+      "$path": "Packages"
+    },
+    "StarterPlayer": {
+      "StarterCharacterScripts": {
+        "Client": {
+          "$path": "test/Client"
+        }
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "test/Server"
+      }
+    }
+  }
+}
