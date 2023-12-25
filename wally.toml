@@ -6,4 +6,3 @@ realm = "shared"
 license = "MIT"
 
 [dependencies]
-Bridgenet2 = "ffrostflame/bridgenet2@1.0.0"

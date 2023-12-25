@@ -8,8 +8,7 @@
       },
       "TestEZ": {
         "$path": "test/TestEZ"
-      },
-      "$path": "Packages"
+      }
     },
     "StarterPlayer": {
       "StarterCharacterScripts": {
