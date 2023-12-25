@@ -3,7 +3,6 @@ return {
 	["Walk"] = {
 		Enabled = true,
 		Active = false,
-		IgnoreWeight = false,
 		Priority = 0,
 		Properties = {
 			["WalkSpeed"] = 16,
@@ -13,7 +12,6 @@ return {
 	["Run"] = {
 		Enabled = false,
 		Active = false,
-		IgnoreWeight = false,
 		Priority = 1,
 		Properties = {
 			["WalkSpeed"] = 24,
@@ -23,7 +21,6 @@ return {
 	["Stun"] = {
 		Enabled = false,
 		Active = false,
-		IgnoreWeight = true,
 		Priority = 12,
 		Properties = {
 			["WalkSpeed"] = 0,

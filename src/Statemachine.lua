@@ -4,7 +4,6 @@ local class = {}
 export type StateInfo = {
 	Enabled: boolean,
 	Active: boolean,
-	IgnoreWeight: boolean,
 	Priority: number,
 	Properties: {
 		[string]: any,
