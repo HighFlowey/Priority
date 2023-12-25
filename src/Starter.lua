@@ -1,4 +1,22 @@
 --!strict
+
+--[=[
+	@interface StateInfo
+	@within Constructor
+	.Enabled boolean
+	.Active boolean
+	.Priority number
+	.Properties {[string]: any} -- properties of a [Humanoid]
+]=]
+
+--[=[
+	@private
+	@interface StateInfoMap
+	@within Constructor
+	.name string
+	.info StateInfo
+]=]
+
 return {
 	["Walk"] = {
 		Enabled = true,
