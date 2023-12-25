@@ -15,7 +15,7 @@ This version is very similar to 0.3.0 aka. Priority3 because from my experience,
 Also, this version does not replicate states between server and client, you would have to do that manually by creating your own wrapper.
 
 # API Documents
-https://highflowey.github.io/Priority/
+https://highflowey.github.io/Priority/api/
 
 # New features
 ### Weight
