@@ -159,6 +159,10 @@ function class:update()
 	end
 
 	-- Set active state to new active state
+	if self.ActiveState ~= highest.info then
+		self.ActiveStateChanged:Fire(highest.name)
+	end
+
 	self.ActiveState = highest.info
 	self:apply()
 end
