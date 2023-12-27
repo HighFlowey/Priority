@@ -13,6 +13,7 @@ local CURRENT_VERSION = "0.5.3"
 
 --[=[
 	@function getAsyncRetry
+	@within Constructor
 	@private
 	
 	PCalls HttpService:GetAsync() and retries infinitly when it fails
@@ -35,6 +36,7 @@ end
 
 --[=[
 	@function readSourceFromGithub
+	@within Constructor
 	@private
 	
 	Returns the source of a file from a github repository

@@ -33,6 +33,7 @@ export type StateMapInfo = {
 function class:__init__()
 	--[=[
 		@prop ActiveStateChanged Signal
+		@since v0.5.2
 		@within Priority
 
 		```lua
@@ -43,7 +44,6 @@ function class:__init__()
 		```
 
 		A signal that get's fired when [Priority.ActiveState] changes.
-		Fires: stateName string
 	]=]
 	self.ActiveStateChanged = Signal.new()
 
