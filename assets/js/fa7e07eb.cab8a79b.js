@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[137],{82701:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"currentVersion","desc":"current version of the wally package","source":{"line":12,"path":"src/init.lua"}}')}}]);
