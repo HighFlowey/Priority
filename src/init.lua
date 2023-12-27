@@ -1,7 +1,81 @@
 --!nocheck
 local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
 local Starter = require(script.Starter)
 local Statemachine = require(script.Statemachine)
+
+--[=[
+	@class currentVersion
+
+	current version of the wally package
+]=]
+local CURRENT_VERSION = "0.5.3"
+
+--[=[
+	@function getAsyncRetry
+	@private
+	
+	PCalls HttpService:GetAsync() and retries infinitly when it fails
+]=]
+local function getAsyncRetry(...)
+	local success, value = pcall(HttpService.GetAsync, HttpService, ...)
+
+	if success then
+		return value
+	elseif value:find("not enabled") then
+		warn(
+			"Priority module uses HttpService to check the version of the module and remind you when there are updates, you can ignore this warning as it doesn't break anything."
+		)
+		return nil
+	else
+		task.wait(3)
+		return getAsyncRetry(...)
+	end
+end
+
+--[=[
+	@function readSourceFromGithub
+	@private
+	
+	Returns the source of a file from a github repository
+]=]
+local function readSourceFromGithub(
+	fileName: string,
+	fileExtension: string,
+	repoInfo: { username: string, repo: string, branch: string }
+)
+	local username = (repoInfo and repoInfo.username or "HighFlowey")
+	local repoName = (repoInfo and repoInfo.repo or "Coach-CodingProblems")
+	local branchName = (repoInfo and repoInfo.branch or "main")
+
+	local source =
+		getAsyncRetry(`https://github.com/{username}/{repoName}/blob/{branchName}/{fileName}.{fileExtension}`, true)
+
+	if source then
+		local info = HttpService:JSONDecode(source)
+		local code = getAsyncRetry(info.payload.blob.rawBlobUrl, true)
+		return code
+	else
+		return nil
+	end
+end
+
+if RunService:IsServer() then
+	task.spawn(function()
+		local wally =
+			readSourceFromGithub("wally", "toml", { username = "HighFlowey", repo = "Priority", branch = "master" })
+		if wally == nil then
+			return
+		end
+
+		local version = string.match(wally, 'version%s-=%s-"([%d%.]+)"')
+		if CURRENT_VERSION ~= version then
+			warn(
+				`You are currently using an outdated version of the Priority module\ncurrent version: {CURRENT_VERSION} | latest version: {version}`
+			)
+		end
+	end)
+end
 
 --[=[
 	@class Constructor
