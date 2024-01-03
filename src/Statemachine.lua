@@ -1,5 +1,5 @@
 --!nocheck
-local Signal = require(script.Parent.Parent)
+local Signal = require(script.Parent.Parent.Signal)
 --[=[
 	@class Priority
 
