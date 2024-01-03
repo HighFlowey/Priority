@@ -9,7 +9,7 @@ local Statemachine = require(script.Statemachine)
 
 	current version of the wally package
 ]=]
-local CURRENT_VERSION = "0.5.4"
+local CURRENT_VERSION = "0.5.5"
 
 --[=[
 	@function getAsyncRetry
