@@ -3,14 +3,14 @@ Priority based state machine, mostly used for fighting games where you have alot
 
 # Installing with wally
 ```
-Priority = "highflowey/priority@0.5.0"
+Priority = "highflowey/priority@0.5.6"
 ```
 
 # Installing with git
 Clone the github repo and rename the src folder to Priority then use rojo to convert it to a Roblox model.
 
-# About version 0.5.0
-This version is very similar to 0.3.0 aka. Priority3 because from my experience, Priority3 was just easier to use than Priority4.
+# About version 0.5.x
+This version is very similar to 0.3.x aka. Priority3 because from my experience, Priority3 was just easier to use than Priority4.
 
 Also, this version does not replicate states between server and client, you would have to do that manually by creating your own wrapper.
 
