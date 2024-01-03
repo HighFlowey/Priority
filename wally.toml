@@ -5,6 +5,7 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
 description = "Priority based state machines with features to help you change humanoid properties with ease."
+exclude = ["test", "Packages", "build", ".vscode"]
 
 [dependencies]
 Signal = "sleitnick/signal@2.0.1"
